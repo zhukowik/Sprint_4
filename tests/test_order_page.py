@@ -1,10 +1,7 @@
-import time
 
 import allure
 import pytest
-
 import data
-from pages.base_page import BasePage
 from pages.order_page import OrderPage
 
 
@@ -24,7 +21,7 @@ class TestOrderScooterThroughHeaderButton:
         order_page.wait_popup_place()
         order_page.click_yes_in_popup()
         # Assert
-        assert OrderPage.wait_popup_successfully_order
+        assert  OrderPage.wait_popup_successfully_order
 
 class TestOrderScooterThroughMiddleButton:
     @allure.title("Тест появления всплывающего окна с сообщением об успешном создании заказа. Через нижнею кнопку входа в сценарий")
