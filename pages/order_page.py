@@ -67,8 +67,12 @@ class OrderPage(BasePage):
     def click_yes_in_popup(self):
         self.click_on_element(OrderLocators.BUTTON_ORDER_YES)
 
-    @staticmethod
+
     @allure.step("Ожидание попапа 'Заказ успешно оформлен'")
+    def wait_popup_successfully_order(self):
+        return self.wait_for_element(OrderLocators.POPUP_SUCCESSFULLY_ISSUED)
+
+    @allure.step("Получение текста попапа 'Заказ успешно оформлен'")
     def wait_popup_successfully_order(self):
         return self.wait_for_element(OrderLocators.POPUP_SUCCESSFULLY_ISSUED)
 

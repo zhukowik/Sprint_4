@@ -38,6 +38,6 @@ class TestOrderScooterThroughMiddleButton:
         order_page.fill_about_rent(date, period, color, text)
         order_page.click_button_order()
         order_page.wait_popup_place()
-        order_page.click_yes_in_popup()
-        # Assert
-        assert OrderPage.wait_popup_successfully_order
+        #order_page.click_yes_in_popup()
+
+        assert order_page.wait_popup_successfully_order()
