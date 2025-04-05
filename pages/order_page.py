@@ -72,10 +72,6 @@ class OrderPage(BasePage):
     def wait_popup_successfully_order(self):
         return self.wait_for_element(OrderLocators.POPUP_SUCCESSFULLY_ISSUED)
 
-    @allure.step("Получение текста попапа 'Заказ успешно оформлен'")
-    def wait_popup_successfully_order(self):
-        return self.wait_for_element(OrderLocators.POPUP_SUCCESSFULLY_ISSUED)
-
     @allure.step("Ожидание прогрузки 'про аренду'")
     def wait_label_about_rent(self):
         self.wait_for_element(OrderLocators.LABEL_ABOUT_RENT)
